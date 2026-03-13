@@ -10,3 +10,12 @@
     чем стили в медиазапросе предпочтений пользователя
   */
 }
+@media (prefers-color-scheme: dark) {
+  .rec-indicator-dark-theme {
+    display: block;
+    color: rgba(255, 0, 112, 1);
+    font-family: 'IBM Plex Mono', sans-serif;
+    
+    
+  }
+}
