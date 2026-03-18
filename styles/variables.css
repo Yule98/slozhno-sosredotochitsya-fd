@@ -7,5 +7,11 @@
   --accent-color: #FF0070;
   --accent-font: 'IBM Plex Mono', sans-serif;
   --color-bg: #000028;
+  --button-color: #FF0070; 
+  --title-color: #000028;
+  --heading-title-color: #FF0070; 
+  --sub-title-color: #000028;
+  --main-text-color: #F1B2CE;
+  --decor-color: #FF0070;
   --bg-image: url(../images/cover-image-dark.png);
 }
