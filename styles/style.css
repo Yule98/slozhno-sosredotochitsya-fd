@@ -34,7 +34,6 @@ header {
   padding-bottom: 39px;
   color: var(--accent-color);
   font-family: 'IBM Plex Mono', sans-serif;
-  
 }
 .rec-indicator-dark-theme::after {
   content: "";
