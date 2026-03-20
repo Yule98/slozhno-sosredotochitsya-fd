@@ -83,9 +83,6 @@ header {
 .header__theme-menu-button:hover {
   border: 0.5px solid var(--button-color);
 }
-.header__theme-menu-button_active {
-  border: 1px solid var(--button-color);
-}
 .header__theme-menu-list {
   display: flex;
   flex-direction: column;
@@ -93,7 +90,7 @@ header {
 }
 .header__theme-menu-button {
   padding-top: 1.5px;
-  padding-bottom: 1.5px;
+  padding-bottom: 4.5px;
   color: var(--button-color);
   text-transform: lowercase;
   background-color: transparent;
@@ -103,6 +100,9 @@ header {
   font-weight: 400;
   outline: none;
   border: 1px solid transparent;
+}
+.header__theme-menu-button_active {
+  border: 1px solid var(--button-color);
 }
 .header_title {
   width: 355px;
