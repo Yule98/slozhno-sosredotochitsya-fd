@@ -23,7 +23,7 @@ header {
   box-sizing: border-box;
 }
 .rec-indicator-dark-theme {
-  display: block;
+  display: var(--rec-display);
   width: 33px;
   height: 26px;
   line-height: 25px;
@@ -76,17 +76,15 @@ header {
   font-family: var(--accent-font);
   font-size: 18px;
 }
-.header__theme-menu-button:focus {
-  outline: none;
-  text-decoration: underline;
-  border-bottom: 1px solid var(--accent-color);
-}
 .header__theme-menu-button:focus-visible {
-  border: 0.5px solid var(--accent-color);
+  outline: none;
+  border-bottom: 1px solid var(--button-color);
+}
+.header__theme-menu-button:hover {
+  border: 0.5px solid var(--button-color);
 }
 .header__theme-menu-button_active {
-  pointer-events: none;
-  border: 1px solid var(--accent-color);
+  border: 1px solid var(--button-color);
 }
 .header__theme-menu-list {
   display: flex;
@@ -103,7 +101,8 @@ header {
   line-height: 18px;
   width: 70px;
   font-weight: 400;
-  border: 1px solid var(--button-color);
+  outline: none;
+  border: 1px solid transparent;
 }
 .header_title {
   width: 355px;
@@ -138,6 +137,8 @@ header {
   width: 375px;
   padding-left: 10px;
   padding-right: 10px;
+}
+.section_main {
   display: grid;
   grid-template-columns: 1fr;
   justify-self: center;
@@ -168,15 +169,6 @@ header {
   line-height: 23.4px;
   font-weight: 400;
 }
-.heading_content_title-secondly {
-  color: var(--heading-title-color);
-  font-family: var(--accent-font);
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 23.4px;
-  padding-top: 40px;
-  padding-bottom: 20px;
-}
 .shadow-text {
   text-shadow: 2px 2px var(--accent-color);
   text-decoration: none;
@@ -190,19 +182,21 @@ header {
   border-bottom: 1px solid var(--main-text-color);
 }
 .subtitle_advice {
-  color: var(--color-bg);
+  color: var(--sub-title-color);
   font-family: var(--accent-font);
   font-weight: 400;
   font-size: 18px;
   line-height: 23.4px;
 }
-.subtitle_text-block-advices {
+.subtitle_text-block {
   display: grid;
   gap: 20px;
 }
-.subtitle-title-image {
-  font-family: var(--accent-font);
-  color: var(--sub-title-color);
+.section-how {
+  padding-bottom: 30px;
+}
+.section-list {
+  padding-top: 20px;
 }
 .gallery {
   display: grid;
@@ -270,48 +264,44 @@ footer {
     padding-left: 20px;
     padding-right: 20px;
   }
-  .firstly {
+  .section-why {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 20px;
-    padding-bottom: 60px;
+    padding-bottom: 80px;
   }
   .heading_content_title {
-    width: 100%;
+    max-width: 236px;
     grid-column: 1;
     padding: 0;
   }
-  .subtitle_text-block-why {
+  .content-paragraph {
+    padding-bottom: 0;
+  }
+  .subtitle_text-block {
    width: 100%;
-   grid-column: 2;
   }
-  .heading_content_title-secondly {
-    max-width: 236px;
-    padding: 0;
-  }
-  .secondly {
+  .section-what {
     display: grid;
     gap: 20px;
-    grid-column: span 2;
-    padding-bottom: 60px;
+    grid-template-columns: 1fr;
+    padding-bottom: 80px;
   }
-  .thirdly {
+  .section-how {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 20px;
-    padding-bottom: 60px;
+    padding-bottom: 80px;
   }
-  .subtitle_text-block-advices {
-    width: 100%;
-    grid-column: 2;
+  .section-list {
+    padding-top: 20px;
+    display: grid;
+    gap: 20px;
   }
   .images {
     gap: 20px;
     grid-column: span 2;
     padding-bottom: 60px;
-  }
-  .subtitle-title-image {
-    grid-column: span 2;
   }
   .gallery {
     width: 100%;
@@ -363,55 +353,15 @@ footer {
     display: flex;
     flex-direction: row;
   }
-  .heading_content_title-secondly {
+  .heading_content_title {
     max-width: 315px;
   }
-  .subtitle_text-block-what {
+  .section__texts {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
   footer {
     min-height: 768px;
-  }
-}
-@media (prefers-color-scheme: light) {
-  .page {
-    background-image: var(--bg-image-light);
-  }
-  .header__theme-menu-button {
-    color: var(--button-color);
-    border: 1px solid var(--button-color);
-  }
-  .decorated-zone:before {
-    border-color: var(--decoration-color);
-  }
-  .decorated-zone::after {
-    border-color: var(--decoration-color);
-  }
-  .header_title {
-    color: var(--primery-color);
-    text-shadow: 4px 4px var(--accent-color);
-  }
-  .title_paragraph {
-    color: var(--title-color);
-  }
-  .title-decor {
-    color: var(--accent-color);
-  }
-  .heading_content_title {
-    color: var(--heading-title-color);
-  }
-  .heading_content_title-secondly {
-    color: var(--heading-title-color);
-  }
-  .subtitle-title {
-    color: var(--sub-title-color);
-  }
-  .content-paragraph {
-    color: var(--main-text-color);
-  }
-  .shadow-text {
-    text-shadow: 2px 2px var(--accent-color);
   }
 }

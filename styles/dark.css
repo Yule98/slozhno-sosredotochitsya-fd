@@ -20,6 +20,7 @@
   --main-text-color: #F1B2CE;
   --decoration-color: #FF0070;
   --decor-color:  #FF0070;
+  --rec-display: block;
   --bg-image: url(../images/cover-image-dark.png);
 }
 
