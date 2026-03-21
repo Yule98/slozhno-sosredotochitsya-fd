@@ -31,9 +31,8 @@ header {
   top: 10px;
   right: 38px;
   position: absolute;
-  padding-bottom: 39px;
   color: var(--accent-color);
-  font-family: 'IBM Plex Mono', sans-serif;
+  font-family: var(--accent-font);
 }
 .rec-indicator-dark-theme::after {
   content: "";
@@ -81,7 +80,7 @@ header {
   border-bottom: 1px solid var(--button-color);
 }
 .header__theme-menu-button:hover {
-  border: 0.5px solid var(--button-color);
+  border: 1px solid var(--border-color);
 }
 .header__theme-menu-list {
   display: flex;
@@ -100,12 +99,13 @@ header {
   font-weight: 400;
   outline: none;
   border: 1px solid transparent;
+  cursor: pointer;
 }
 .header__theme-menu-button_active {
+  pointer-events: none;
   border: 1px solid var(--button-color);
 }
 .header_title {
-  width: 355px;
   line-height: 83%;
   font-family: var(--accent-font);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
@@ -125,7 +125,8 @@ header {
 }
 .title_paragraph {
   font-family: var(--accent-font);
-  width: 355px;
+  max-width: 355px;
+  width: 100%;
   line-height: 23.4px;
   font-size: 18px;
   color: var(--title-color);
@@ -150,7 +151,7 @@ header {
   font-weight: 700;
   line-height: 23.4px;
   color: var(--heading-title-color);
-  padding-top: 40px;
+  padding-top: 30px;
   padding-bottom: 20px;
 }
 .subtitle-title {
@@ -174,11 +175,10 @@ header {
   text-decoration: none;
 }
 .shadow-text:focus {
+  outline: none;
   border: 1px solid var(--main-text-color);
 }
-.shadow-text:focus-visible {
-  outline: none;
-  text-decoration: underline;
+.shadow-text:hover {
   border-bottom: 1px solid var(--main-text-color);
 }
 .subtitle_advice {
@@ -187,10 +187,6 @@ header {
   font-weight: 400;
   font-size: 18px;
   line-height: 23.4px;
-}
-.subtitle_text-block {
-  display: grid;
-  gap: 20px;
 }
 .section-how {
   padding-bottom: 30px;
@@ -221,7 +217,7 @@ footer {
 .footer_word {
   color: var(--primery-color);
   font-family: var(--accent-font);
-  font-size: 116px;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: 700;
   line-height: 83%;
   text-shadow: 2px 2px var(--accent-color);
@@ -229,11 +225,7 @@ footer {
 @media (width >=768px) {
   header {
     min-height: 1024px;
-    width: 100%;
-    display: grid;
     padding: 20px;
-    grid-template-rows: 1fr min-content 1fr;
-    box-sizing: border-box;
   }
   .rec-indicator-dark-theme {
     top: 20px;
@@ -251,24 +243,21 @@ footer {
     right: 20px;
   }
   .header_title {
-    width: 100%;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     justify-self: start;
     align-self: center;
-    line-height: 83%;
     margin-left: -20px;
   }
   .title_paragraph {
-    width: 364px;
+    max-width: 364px;
+    width: 100%;
   }
   .content_section {
-    width: 100%;
     padding-top: 60px;
     padding-left: 20px;
     padding-right: 20px;
   }
-  .section-why {
-    display: grid;
+  .section_main {
     grid-template-columns: 1fr 2fr;
     gap: 20px;
     padding-bottom: 80px;
@@ -282,18 +271,13 @@ footer {
     padding-bottom: 0;
   }
   .subtitle_text-block {
-   width: 100%;
+    display: grid;
+    gap: 20px;
+    width: 100%;
   }
   .section-what {
-    display: grid;
     gap: 20px;
     grid-template-columns: 1fr;
-    padding-bottom: 80px;
-  }
-  .section-how {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 20px;
     padding-bottom: 80px;
   }
   .section-list {
@@ -327,20 +311,22 @@ footer {
   footer {
     min-height: 1024px;
   }
+  .footer_word {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
 }
 @media (width>=1024px) {
   header {
-    width: 100%;
     min-height: 768px;
     padding: 20px;
   }
   .content_section {
-    width: 100%;
     padding-left: 20px;
     padding-right: 20px;
   }
   .title_paragraph {
-    min-width: 491px;
+    max-width: 491px;
+    width: 100%;
   }
   .header__theme-menu {
     justify-self: center;
@@ -360,5 +346,8 @@ footer {
   }
   footer {
     min-height: 768px;
+  }
+  .footer_word {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 }
