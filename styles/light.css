@@ -13,7 +13,7 @@
   --accent-color: #FF8DCB;
   --color-bg: #FFF1F7;
   --button-color: #353430;
-  --border-color: #353430; 
+  --border-color: rgba(50, 49, 45, 0.4); 
   --title-color:#353430;
   --heading-title-color: #353430;
   --sub-title-color: #353430;
@@ -30,7 +30,7 @@
     --accent-color: #FF8DCB;
     --color-bg: #FFF1F7;
     --button-color: #353430;
-    --border-color: #353430; 
+    --border-color: rgba(50, 49, 45, 0.4);
     --title-color:#353430;
     --heading-title-color: #353430;
     --sub-title-color: #353430;

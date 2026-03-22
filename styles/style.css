@@ -136,6 +136,7 @@ header {
 }
 .content_section {
   width: 100%;
+  padding-top: 10px;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -197,7 +198,7 @@ header {
 .gallery {
   display: grid;
   gap: 10px;
-  padding-top: 20px;
+  padding-top: 10px;
   padding-bottom: 40px;
 }
 .gallery_item {
@@ -294,6 +295,7 @@ footer {
     width: 100%;
     gap: 20px;
     grid-template-columns: repeat(3, 1fr);
+    padding-top: 20px;
     padding-bottom: 0;
   }
   .gallery_type_sunset {
@@ -346,8 +348,5 @@ footer {
   }
   footer {
     min-height: 768px;
-  }
-  .footer_word {
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 }
